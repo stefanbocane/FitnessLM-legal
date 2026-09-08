@@ -18,11 +18,11 @@
 
 <h1>Privacy Policy</h1>
 <p class="effective">Effective Date: June 17, 2026</p>
-<p class="effective">Last Updated: September 1, 2026</p>
+<p class="effective">Last Updated: September 7, 2026</p>
 
 <p>FitnessLM ("the App") is operated by Stefan Bocanegra ("we," "us," or "our"). This Privacy Policy explains how we collect, use, and protect your information when you use the App.</p>
 
-<p><strong>Local-first by design.</strong> Nearly everything you do in FitnessLM — your profile, injuries, workout logs, progress photos, coach conversations, knowledge bank, and weekly summaries — lives on your device and syncs only between your own Apple devices via iCloud. Network traffic happens only when you explicitly configure a cloud AI provider, open the community library, or sign in with Apple for community or social features.</p>
+<p><strong>Local-first by design.</strong> Your training records, nutrition logs, profile, photos, knowledge bank, and coach conversations are stored on your device and may sync through your private iCloud account. Network activity also occurs for model downloads, configured external AI or embedding providers, and optional community, social, notification, and song-search features described below.</p>
 
 <h2>1. Information We Collect</h2>
 
@@ -30,6 +30,7 @@
 <ul>
   <li><strong>Profile Information:</strong> Name, age, height, weight, body fat estimate, training experience, goals, and injury records you enter during onboarding or in settings.</li>
   <li><strong>Workout Data:</strong> Training programs, exercise logs, set/rep/weight data, RPE ratings, session notes, and workout duration.</li>
+  <li><strong>Nutrition Data:</strong> Foods, portions, meals, meal plans, nutrient totals, and nutrition targets or overrides you enter in Fuel. These records are stored locally and may sync through iCloud. Nutrition summaries and targets may be included in context sent to your configured external AI provider.</li>
   <li><strong>Progress Photos:</strong> Photos you optionally attach to workout sessions, stored on your device and synced via iCloud if enabled.</li>
   <li><strong>Coach Conversations:</strong> Messages you send to the AI coach and the responses generated.</li>
   <li><strong>Community Content:</strong> Documents, research, or programs you voluntarily upload to the community library (requires Sign in with Apple).</li>
@@ -39,7 +40,7 @@
 <h3>1.2 Information Collected Automatically</h3>
 <ul>
   <li><strong>Apple ID (Community and Social Only):</strong> If you sign in with Apple to use community or social features, we receive a unique identifier and optionally your name. We never receive your email address unless you choose to share it.</li>
-  <li><strong>Push Notification Token (Social Only):</strong> If you enable notifications for social features, the app stores your device's Apple Push Notification token in our database so we can deliver friend-request and comment notifications. The token identifies your device, not you, and is deleted when you sign out or delete your account.</li>
+  <li><strong>Push Notification Token (Social Only):</strong> If you enable notifications for social features, the app stores your device's Apple Push Notification token in our database so we can deliver friend-request and comment notifications. The token identifies an app installation and is associated with your signed-in account for notification delivery. The app requests removal of this device token when you sign out or delete your account.</li>
   <li><strong>Song Search (Optional):</strong> If you attach a song to a shared workout, your search text is sent to Apple Music (MusicKit) to find the track, and the chosen track's identifier is sent to Odesli (song.link) to build a cross-platform link. We do not receive your Apple Music listening history.</li>
   <li><strong>Usage Analytics:</strong> We do not collect analytics, crash reports, or telemetry. The App does not include any third-party analytics SDKs.</li>
 </ul>
@@ -58,11 +59,12 @@
   <li><strong>iCloud Sync:</strong> If you have iCloud enabled, your data syncs across your Apple devices via CloudKit. Apple manages this sync; we do not have access to your iCloud data.</li>
   <li><strong>AI Coaching:</strong> When you use the AI coach, the app may send the context needed to answer your request to the AI provider you configure. Two fundamentally different modes are supported:
     <ul>
-      <li><strong>On-device mode:</strong> FitnessLM ships with an embedded Gemma 4 model that runs entirely on your iPhone via Apple's LiteRT-LM runtime. In this mode, your messages, context, and any photo you attach never leave the device. No network requests are made.</li>
-      <li><strong>Cloud mode:</strong> If you configure an external provider (e.g., OpenAI, Anthropic, OpenRouter, a self-hosted Ollama server), the app sends the context needed to generate a reply to that provider. This can include profile and body-measurement data, injury records, current program structure, recent workout history, relevant knowledge-bank excerpts, recent coach-conversation excerpts, and any photo you intentionally attach. We do not operate these services. See Section 4.</li>
+      <li><strong>On-device mode:</strong> After you download the model package, text generation runs on your iPhone using Google's LiteRT-LM runtime. Local text generation does not send your prompt to an AI server. On-device Coach currently does not analyze attached photos. Model downloads use the network; iCloud sync and optional network features remain separate from local generation.</li>
+      <li><strong>Cloud mode:</strong> If you configure an external provider (e.g., OpenAI, Anthropic, OpenRouter, a self-hosted Ollama server), the app sends the context needed to generate a reply to that provider. This can include profile and body-measurement data, injury records, current program structure, recent workout history, nutrition summaries and targets, relevant knowledge-bank excerpts, recent coach-conversation excerpts, and any photo you intentionally attach. We do not operate these services. See Section 4.</li>
     </ul>
   </li>
-  <li><strong>Knowledge Bank Auto-Ingest and Distillation:</strong> FitnessLM can optionally auto-ingest your session notes and active injury notes into your local knowledge bank, and distill older coach conversations into summaries so the coach can recall them. These features run locally, write only to your device's database, and can be turned off at any time under Settings &gt; AI Features &amp; Usage.</li>
+  <li><strong>Knowledge Search and Embeddings:</strong> The default on-device embedding model processes knowledge text and search queries locally. If you select an external embedding provider, text being indexed and search queries are sent to that provider after the app's third-party AI permission step. Embedding settings are separate from the chat model; choosing local chat does not override an explicitly configured external embedding provider.</li>
+  <li><strong>Knowledge Bank Auto-Ingest and Distillation:</strong> Optional auto-ingest copies session and injury notes into your knowledge bank. Optional conversation distillation sends eligible conversation text to your configured external AI provider to produce a summary; distillation is disabled in on-device chat mode. Saved notes and summaries use the app's local database and may sync through iCloud. These features can be turned off under Settings &gt; AI Features &amp; Usage.</li>
   <li><strong>Community Library:</strong> Content you upload to the community library is stored on our Supabase-hosted database and is visible to other users. Your display name (from Sign in with Apple) appears as the author.</li>
   <li><strong>Social:</strong> Social features use Supabase to let accepted friends view manually shared workout summary posts, react, and comment. Username search exposes only safe public profile fields. Blocks and reports are used for safety and moderation.</li>
 </ul>
@@ -70,7 +72,7 @@
 <h2>3. Data Storage and Security</h2>
 <ul>
   <li><strong>Local-First Architecture:</strong> The vast majority of your data never leaves your device. Workout logs, training programs, stats, and coach conversations are stored in a local SwiftData database.</li>
-  <li><strong>Encryption:</strong> All network communication uses HTTPS/TLS. API credentials you configure are stored in the iOS Keychain with device-only protection (not included in backups).</li>
+  <li><strong>Encryption:</strong> Public remote AI endpoints must use HTTPS, and the app uses HTTPS/TLS for its hosted services. A self-hosted provider on a local network may use HTTP; HTTP traffic to that server is not encrypted by TLS. API credentials you configure are stored in the iOS Keychain with device-only protection (not included in backups).</li>
   <li><strong>iCloud:</strong> If iCloud sync is enabled for FitnessLM, personal training, body, injury, workout, photo, and coach-context data may sync through your private iCloud account so your own Apple devices stay in sync. We cannot access that private CloudKit data.</li>
   <li><strong>Community and Social Data:</strong> Community documents, votes, reports, social profiles, friendships, social posts, reactions, comments, reports, and blocks are stored on Supabase (hosted on AWS). Row-level security limits access and mutation according to ownership, friendship status, and block status.</li>
   <li><strong>No Server-Side Processing:</strong> We do not process, analyze, or mine your private workout data on our servers. The backend stores only community content you explicitly upload and social workout summaries you explicitly share.</li>
@@ -81,7 +83,7 @@
 <ul>
   <li><strong>On-Device (Gemma 4 via LiteRT-LM):</strong> FitnessLM includes an embedded small language model that runs entirely on your iPhone's GPU. Your messages, the context the app assembles, and any photo you attach stay on the device. No network requests are made for AI generation. This mode requires a device with at least 8 GB of RAM.</li>
   <li><strong>Self-Hosted Local Providers (e.g., Ollama):</strong> If you point FitnessLM at a server running on your local network, data travels only within that network. The app enforces HTTPS for remote servers and rejects URLs that target cloud metadata or link-local addresses.</li>
-  <li><strong>Cloud Providers (e.g., OpenAI, Anthropic, OpenRouter):</strong> If you configure a cloud provider, the app sends the context needed to generate a reply — profile and body-measurement data, injury records, program structure, recent workout history, relevant knowledge-bank excerpts, recent coach-conversation excerpts, and any photo you intentionally attach — to that provider. You supply your own API key. We are not a party to your relationship with the provider, and their privacy policy governs how they handle your data.</li>
+  <li><strong>Cloud Providers (e.g., OpenAI, Anthropic, OpenRouter):</strong> If you configure a cloud provider, the app sends the context needed to generate a reply — profile and body-measurement data, injury records, program structure, recent workout history, nutrition summaries and targets, relevant knowledge-bank excerpts, recent coach-conversation excerpts, and any photo you intentionally attach — to that provider. You supply your own API key. We are not a party to your relationship with the provider, and their privacy policy governs how they handle your data.</li>
   <li><strong>Embeddings for Knowledge Search:</strong> FitnessLM can generate embeddings either on-device (default) or via a cloud provider you configure. On-device embeddings keep all knowledge-bank text and your queries local. Cloud embeddings send that text to the configured provider.</li>
   <li><strong>Clipboard Mode:</strong> You manually copy prompts out of FitnessLM and paste responses back in. The clipboard export intentionally omits your profile and injury data — only the conversation messages are copied, with a 30-second retention hint.</li>
 </ul>
