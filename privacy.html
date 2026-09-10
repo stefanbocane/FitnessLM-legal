@@ -13,8 +13,12 @@
   li { margin-bottom: 0.5em; }
   .contact { background: #f5f5f7; padding: 16px; border-radius: 8px; margin-top: 2em; }
 </style>
+<link rel="canonical" href="https://fitnesslm.app/privacy.html">
+<meta http-equiv="refresh" content="0; url=https://fitnesslm.app/privacy.html">
 </head>
 <body>
+<p role="status">This page has moved to <a href="https://fitnesslm.app/privacy.html">fitnesslm.app</a>. If you are not redirected automatically, follow that link. A copy of the page is included below.</p>
+
 
 <h1>Privacy Policy</h1>
 <p class="effective">Effective Date: June 17, 2026</p>
@@ -23,7 +27,7 @@
 <p>FitnessLM ("the App") is operated by Stefan Bocanegra ("we," "us," or "our"). This Privacy Policy explains how we collect, use, and protect your information when you use the App.</p>
 
 <p><strong>Coach photos:</strong> Version 1.0.0 build 141 disables new photo-analysis requests. Earlier builds may send a photo you intentionally attach to your configured external AI provider. Previously saved photos remain in your records and exports; this change does not delete them or recall data already sent.</p>
-<p><strong>Local-first by design.</strong> Your training records, nutrition logs, profile, photos, knowledge bank, and coach conversations are stored on your device and may sync through your private iCloud account. Network activity also occurs for model downloads, configured external AI or embedding providers, and optional community, social, notification, and song-search features described below.</p>
+<p><strong>Storage starting with version 1.0.0 build 142:</strong> Your complete app records stay on this iPhone. A separate, limited iCloud record syncs selected workout, program and progression information. Profile details, body measurements, exercise restrictions, Fuel, private notes, Coach conversations, saved knowledge, generated explanations and photos are excluded from that workout sync record. Optional external AI, external embeddings and Social are separate connections described below. Earlier iCloud copies are not automatically erased by this update.</p>
 
 <h2>1. Information We Collect</h2>
 
@@ -31,8 +35,8 @@
 <ul>
   <li><strong>Profile Information:</strong> Age is required during onboarding to apply minimum-age rules. Nickname, height and weight are optional. You can provide training experience, goals and optional exercise restrictions. Onboarding does not require a diagnosis or pain-severity questionnaire. Starting with version 1.0.0 build 139, we no longer ask for body fat or include its structured profile value in Coach prompts. Values saved in older versions may remain in historical storage, iCloud copies and exports; updating does not erase them.</li>
   <li><strong>Workout Data:</strong> Training programs, exercise logs, set/rep/weight data, RPE ratings, session notes, and workout duration.</li>
-  <li><strong>Nutrition Data:</strong> Foods, portions, meals, meal plans, nutrient totals, and nutrition targets or overrides you enter in Fuel. These records are stored locally and may sync through iCloud. In build 139, Fuel records and targets are not automatically added to Coach context. Nutrition information you write in Coach messages, or that already appears in saved conversations or knowledge, can still be processed by your configured AI provider.</li>
-  <li><strong>Progress Photos:</strong> Photos you optionally attach to workout sessions, stored on your device and synced via iCloud if enabled.</li>
+  <li><strong>Nutrition Data:</strong> Foods, portions, meals, plans, nutrient totals and targets you enter in Fuel are stored on this iPhone and excluded from the new workout sync record. Fuel records and targets are not automatically added to Coach context. Nutrition information you write in Coach messages or saved knowledge can still be processed by your selected AI provider.</li>
+  <li><strong>Progress Photos:</strong> Previously saved progress and conversation photos remain in local records and exports. New Coach photo analysis is unavailable. These photos are excluded from the new workout sync record. Earlier versions and earlier backups may retain copies as described below. Social avatar uploads are a separate sharing feature.</li>
   <li><strong>Coach Conversations:</strong> Messages you send to the AI coach and the responses generated.</li>
   <li><strong>Community Content:</strong> Documents, research, or programs you voluntarily upload to the community library (requires Sign in with Apple).</li>
   <li><strong>Social Content:</strong> If you use Social, we store your username and display name, friendships and requests, group information and memberships, blocks, reports, reactions, comments and shared workout summaries. You can share workouts manually or enable optional Auto-Share for selected destinations. Summary fields can include workout title/day, completion date, duration, working-set count, PR count and selected top sets. Structured summaries exclude injuries, bodyweight, progress photos, session notes, journal entries, AI reviews, Coach conversations and private knowledge-bank content. Information you write in posts or comments is shared as content. Friends and group members can see content available to them under the applicable sharing and access controls.</li>
@@ -40,7 +44,7 @@
 
 <h3>1.2 Information Collected Automatically</h3>
 <ul>
-  <li><strong>Apple ID (Community and Social Only):</strong> If you sign in with Apple to use community or social features, we receive a unique identifier and optionally your name. We never receive your email address unless you choose to share it.</li>
+  <li><strong>Apple ID (Community and Social Only):</strong> If you sign in with Apple for community or Social, we receive an account identifier and may receive a name. The app requests a name, not an email address, through Apple sign-in. Information you email to support is received separately with your message.</li>
   <li><strong>Push Notification Token (Social Only):</strong> If you enable notifications for social features, the app stores your device's Apple Push Notification token in our database so we can deliver friend-request and comment notifications. The token identifies an app installation and is associated with your signed-in account for notification delivery. The app requests removal of this device token when you sign out or delete your account.</li>
   <li><strong>Song Search (Optional):</strong> If you attach a song to a shared workout, your search text is sent to Apple Music (MusicKit) to find the track, and the chosen track's identifier is sent to Odesli (song.link) to build a cross-platform link. We do not receive your Apple Music listening history.</li>
   <li><strong>Usage Analytics:</strong> The app does not include third-party analytics SDKs or advertising tracking. It records local diagnostics, including AI performance information, for troubleshooting. Apple and the services used by network features may process operational logs and diagnostics under their own policies. Information you choose to send to support is received with your message.</li>
@@ -48,7 +52,7 @@
 
 <h3>1.3 Information We Do NOT Collect</h3>
 <ul>
-  <li>We do not collect your location, contacts, calendar, microphone audio, Apple Health/HealthKit data, or browsing history.</li>
+  <li>We do not access your device address book, calendar, microphone audio, location, Apple Health/HealthKit data or browsing history. Social friendships and requests form a separate social graph stored for the Social feature.</li>
   <li>We do not include third-party analytics or session-recording SDKs.</li>
   <li>We do not use advertising identifiers or participate in ad networks.</li>
   <li>We do not track you across apps or websites.</li>
@@ -57,7 +61,7 @@
 <h2>2. How We Use Your Information</h2>
 <ul>
   <li><strong>Core App Functionality:</strong> All workout data, profile information, and progress photos are stored locally on your device using Apple's SwiftData framework. This data powers your training log, statistics, progression tracking, and AI coaching context.</li>
-  <li><strong>iCloud Sync:</strong> If you have iCloud enabled, your data syncs across your Apple devices via CloudKit. Apple manages this sync; we do not have access to your iCloud data.</li>
+  <li><strong>iCloud Sync:</strong> Selected workout, program and progression information syncs through your private iCloud account, as described in Section 3. Profile details, body measurements, exercise restrictions, private notes, Fuel and Coach history are excluded from this sync record. This is not a full backup of your app data.</li>
   <li><strong>AI Coaching:</strong> When you use the AI coach or enable automatic AI features, the app may send the context needed for that task to the AI provider you configure, subject to your AI-sharing permission and feature settings. Two fundamentally different modes are supported:
     <ul>
       <li><strong>On-device mode:</strong> After you download the model package, text generation runs on your iPhone using Google's LiteRT-LM runtime. Local text generation does not send your prompt to an AI server. Enabled local text tasks, such as workout reviews and summaries, run while the app is in the foreground. Photo analysis is not available in this version; historical images remain in saved records. Model downloads use the network; iCloud sync and optional network features remain separate from local generation.</li>
@@ -65,26 +69,29 @@
     </ul>
   </li>
   <li><strong>Knowledge Search and Embeddings:</strong> The default on-device embedding model processes knowledge text and search queries locally. If you select an external embedding provider, text being indexed and search queries are sent to that provider after the app's third-party AI permission step. Embedding settings are separate from the chat model; choosing local chat does not override an explicitly configured external embedding provider.</li>
-  <li><strong>Knowledge Bank Auto-Ingest and Distillation:</strong> Optional auto-ingest copies session and injury notes into your knowledge bank. Optional conversation distillation summarizes eligible conversation text using your configured AI provider. With on-device AI selected, summary generation runs on your iPhone; with a cloud provider selected, the eligible text is sent to that provider. Saved notes and summaries use the app's local database and may sync through iCloud. These features can be turned off under Settings &gt; AI Features &amp; Usage.</li>
+  <li><strong>Knowledge Bank Auto-Ingest and Distillation:</strong> Optional auto-ingest copies session and injury notes into your knowledge bank. Optional conversation distillation summarizes eligible conversation text using your configured AI provider. With on-device AI selected, summary generation runs on your iPhone; with a cloud provider selected, the eligible text is sent to that provider. Saved notes, summaries, indexed knowledge and conversation history stay in the local database and are excluded from workout sync. Authorized external AI or embedding providers can still receive eligible content for the requested feature. Choosing local chat does not override separately configured external embeddings. These features can be turned off under Settings &gt; AI Features &amp; Usage.</li>
   <li><strong>Community Library:</strong> Content you upload to the community library is stored on our Supabase-hosted database and is visible to other users. Your display name (from Sign in with Apple) appears as the author.</li>
-  <li><strong>Social:</strong> Social features use Supabase for profiles, friendships, groups, shared workouts and interactions. Auto-Share is off by default. The separate Sync top lifts setting is on by default and sends personal-record lift statistics to your social profile; you can turn it off in Social settings. Profile muscle-distribution statistics are derived from published workouts. When workout presence is enabled, session identifiers and start times are sent to show friends that you are training. These are separate from the redacted workout-summary fields. Blocks and reports support moderation.</li>
+  <li><strong>Social:</strong> Social features use Supabase for profiles, friendships, groups, shared workouts and interactions. Auto-Share is off by default. The separate Sync top lifts setting is on by default. It sends the exercise name as entered, estimated one-rep maximum, top-set weight and repetitions, and date to your social profile. This includes custom names excluded from iCloud workout sync. Queued records can be sent when you sign in, restore a session or reconnect. Turning this setting off pauses queued uploads; it does not delete the queue or published lifts. Re-enabling can send the retained backlog. Profile muscle-distribution statistics are derived from published workouts. When workout presence is enabled, session identifiers and start times are sent to show friends that you are training. These are separate from the redacted workout-summary fields. Blocks and reports support moderation.</li>
 </ul>
 
 <h2>3. Data Storage and Security</h2>
 <ul>
   <li><strong>Local-First Architecture:</strong> Workout logs, training programs, stats, and coach conversations are stored in a local SwiftData database. iCloud sync, configured external AI and embedding providers, and optional sharing features can transmit data as described in this policy.</li>
   <li><strong>Encryption:</strong> Public remote AI endpoints must use HTTPS, and the app uses HTTPS/TLS for its hosted services. A self-hosted provider on a local network may use HTTP; HTTP traffic to that server is not encrypted by TLS. API credentials you configure are stored in the iOS Keychain with device-only protection (not included in backups).</li>
-  <li><strong>iCloud:</strong> If iCloud sync is enabled for FitnessLM, personal training, body, injury, workout, photo, and coach-context data may sync through your private iCloud account so your own Apple devices stay in sync. We cannot access that private CloudKit data.</li>
+  <li><strong>iCloud:</strong> The separate workout sync record can include dates, exercise weights and repetitions, set and rest timing, workout duration, program prescriptions and training weekdays, progression values, and names matched to the app’s exercise catalog. It excludes profile and body measurements, exercise restrictions, Fuel, RPE ratings, private notes, Coach conversations, saved knowledge, generated explanations and photos. Custom exercise and program names are excluded and may appear as generic labels after restoration. Names shared through Social or sent to external AI have separate sharing paths. Apple manages your private iCloud account; we do not have access to its private workout records.</li>
   <li><strong>Community and Social Data:</strong> Community uploads, social profiles, friendships, groups and memberships, shared workouts, profile statistics, workout presence, interactions, moderation records and notification tokens are stored on our Supabase backend. Access controls use ownership, friendships, group membership and blocks, as appropriate to each feature.</li>
   <li><strong>Our Backend:</strong> Our backend supports community and social features, including account records, uploaded content, shared workout summaries, profile statistics, groups, interactions, moderation records and notification tokens. Private coaching requests go to the AI provider you configure rather than to a FitnessLM-operated AI service.</li>
 </ul>
+
+<p><strong>Backups and changing phones:</strong> The app marks its Library directory, including the local database, attachments, preferences and supporting files, for exclusion from device backups. This is a system setting, not a guarantee that no copy can exist. Do not rely on backups or phone-to-phone transfer to preserve local records. Quick Start and other transfer routes have not all been verified. This setting does not remove earlier backups, exports, copies on other devices or data previously sent to services.</p>
+<p><strong>Earlier iCloud records:</strong> Older versions could sync a broader set of records. Updating preserves records already on this iPhone and stops this version from writing through the old full-data sync path. It does not erase earlier iCloud copies; older installations may continue their previous behavior. During initialization and explicit sync checks, the app can read limited workout, program and progression fields from the old container to recover eligible history. This reader does not restore excluded notes, body measurements or Coach content. Contact support before attempting to remove old cloud history.</p>
 
 <h2>4. AI Providers</h2>
 <p>FitnessLM supports several AI coaching modes. You choose which (if any) to use:</p>
 <ul>
   <li><strong>On-Device (Gemma 4 via LiteRT-LM):</strong> After you download the model package, text generation runs locally on supported iPhones using Google's LiteRT-LM runtime. Your prompt is not sent to an AI server for local generation. Photo analysis is not available in this version. Availability depends on your device and the app's model eligibility settings; some devices require an explicit beta opt-in. Downloads, iCloud sync, optional network features, and separately configured external embeddings can still use the network.</li>
   <li><strong>Self-Hosted Local Providers (e.g., Ollama):</strong> Chat requests are sent to the server address you configure. A server on your local network can receive those requests over that network, but this does not make all app activity local: iCloud, model downloads, external embeddings and optional network features have separate connections. The app requires HTTPS for public remote AI endpoints; local-network HTTP is not encrypted by TLS.</li>
-  <li><strong>Cloud Providers (e.g., OpenAI, Anthropic, OpenRouter):</strong> If you configure a cloud provider, the app sends the context needed to generate a reply — profile and body-measurement data, injury records, program structure, recent workout history, relevant knowledge-bank excerpts, recent coach-conversation excerpts — to that provider. You supply your own API key. We are not a party to your relationship with the provider, and their privacy policy governs how they handle your data.</li>
+  <li><strong>Cloud Providers (e.g., OpenAI, Anthropic, OpenRouter):</strong> If you configure a cloud provider, the app sends the context needed to generate a reply : profile and body-measurement data, injury records, program structure, recent workout history, relevant knowledge-bank excerpts, recent coach-conversation excerpts : to that provider. You supply your own API key. We are not a party to your relationship with the provider, and their privacy policy governs how they handle your data.</li>
   <li><strong>Embeddings for Knowledge Search:</strong> FitnessLM can generate embeddings either on-device (default) or via a cloud provider you configure. On-device embeddings keep all knowledge-bank text and your queries local. Cloud embeddings send that text to the configured provider.</li>
   <li><strong>Clipboard Mode:</strong> Only conversation messages are copied, with a 30-second clipboard expiration hint. The export omits separately assembled profile and injury context, but messages may themselves contain health or personal information you entered. Pasting them into another service shares that text with that service; clipboard expiry does not delete a pasted copy.</li>
 </ul>
@@ -101,9 +108,10 @@
 
 <h2>6. Your Rights and Controls</h2>
 <ul>
-  <li><strong>Export:</strong> You can export all your local data as a JSON file from Settings &gt; Export Data at any time. API keys and auth tokens are intentionally excluded from the export.</li>
-  <li><strong>Reset Local Data:</strong> Settings &gt; Export Data &gt; Reset All Data removes all local data on this device, clears AI credentials and preferences, and signs you out of community services. If iCloud Sync is active, the deletion may also remove synced copies from your other Apple devices.</li>
-  <li><strong>Delete Account:</strong> If you signed in for community or social features, use Settings &gt; Account &gt; Delete Account to request deletion of your account and associated backend content. After the server confirms deletion, the app clears this device’s app data, credentials and preferences. If server deletion fails, local data is preserved and an error is shown. If the local reset fails after server deletion, the app shows “Local Wipe Incomplete”; use Settings &gt; Export Data &gt; Reset All Data to finish. Contact support if deletion fails or content remains. This action cannot be undone. It does not recall information already copied by another person or sent to an external AI provider.</li>
+  <li><strong>Export:</strong> Settings &gt; Export Data creates a JSON copy of the local records described on the export screen, including sensitive notes and historical photos. API keys and authentication tokens are excluded. In-app import is not available, so this file is not a one-tap restore option. Saving or sharing it elsewhere creates a copy controlled by that destination.</li>
+  <li><strong>Reset This Device Only:</strong> This control in Settings &gt; Export Data works offline. It removes this device’s local records, credentials and preferences and pauses workout sync and restore. It does not delete your online account, shared posts or existing iCloud copies. New workouts stay on this device until you explicitly reset synced history. Unsent changes can be discarded; changes already sent may still finish. Re-request any unconfirmed synced reset in Export &amp; Data.</li>
+  <li><strong>Reset Synced Workout History:</strong> Settings &gt; Export Data &gt; Reset Synced Workout History removes this device’s data and shared workout posts and queues deletion of history in the new iCloud workout sync system. It requires an iCloud connection to prepare deletion. A local reset finishing does not confirm remote deletion has finished. Private copies on other devices, old-container records, exports and information already sent to other services are not removed.</li>
+  <li><strong>Delete Account:</strong> Settings &gt; Account &gt; Delete Account requests deletion of your account and associated backend content. After the server confirms deletion, the app performs Reset This Device Only, clearing local records, credentials and preferences and pausing workout sync. If server deletion fails, local records are preserved. If local cleanup fails afterward, the app shows “Local Wipe Incomplete”; use Settings &gt; Export Data &gt; Reset This Device Only to retry. This does not delete workout records already in your iCloud, older iCloud copies, exports, private copies on other devices or content others saved. It cannot recall data sent to external AI. Contact support if deletion fails or backend content remains.</li>
   <li><strong>Community Content Removal:</strong> You can delete your own community uploads at any time from the document detail page.</li>
   <li><strong>Social Controls:</strong> You can delete your own social workout posts and your own comments. You can also block users and report profiles, posts, or comments.</li>
   <li><strong>Revoke Apple ID Access:</strong> You can also revoke FitnessLM's access to your Apple ID from iOS Settings &gt; Apple ID &gt; Sign in with Apple at any time. This does not automatically delete content you already uploaded; use Delete Account in the app to also remove server-side data.</li>
@@ -111,7 +119,7 @@
 </ul>
 
 <h2>7. Children's Privacy</h2>
-<p>The App is intended for people aged 13 and older. Age is self-reported; this is not independent age verification. The App is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
+<p>The public release is intended for adults aged 18 and older. Earlier TestFlight builds supported ages 13 and older. The adults-only update prevents new under-18 onboarding and restricts coaching and social features for saved profiles below 18 or with an unconfirmed age, while retaining access to existing history, export and deletion. Age is self-reported; this is not independent age verification. The App is not directed at children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us and we will delete it.</p>
 
 <h2>8. Changes to This Policy</h2>
 <p>We may update this Privacy Policy from time to time. The updated version will be indicated by the "Last Updated" date at the top. We encourage you to review this page periodically.</p>
@@ -122,7 +130,7 @@
 <div class="contact">
   <p>If you have questions about this Privacy Policy or your data, contact us at:</p>
   <p><strong>Stefan Bocanegra</strong><br>
-  Email: stefanbocane@gmail.com</p>
+  Email: support@fitnesslm.app</p>
 </div>
 
 </body>
